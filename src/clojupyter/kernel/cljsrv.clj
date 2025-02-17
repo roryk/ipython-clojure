@@ -184,5 +184,5 @@
         nrepl-client        (nrepl/client-session nrepl-base-client)
         nrepl-sockaddr      (.getLocalSocketAddress ^java.net.ServerSocket (:server-socket nrepl-server))
         cljsrv          (->CljSrv nrepl-server nrepl-client nrepl-sockaddr (atom false))]
-    (log/info (str "Started NREPL server: tcp:/" nrepl-sockaddr "."))
+    (println (str "Started NREPL server: tcp:/" nrepl-sockaddr "."))
     cljsrv))
